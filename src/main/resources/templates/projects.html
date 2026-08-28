@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Mohammed Suhail A</title>
+    
+    <meta name="description" content="Technical projects and case studies by Mohammed Suhail A across AI/ML, IoT Telemetry, Computer Vision, and Java Software.">
+    <meta name="keywords" content="Used Car Price Prediction, Transmission Line Fault Detection, AR VR Try-On, Java Projects, Mohammed Suhail">
+    <meta name="author" content="Mohammed Suhail A">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body class="warm-theme">
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Background Minimal Abstract Wave Lines Canvas -->
+    <div class="topographic-bg" aria-hidden="true">
+        <canvas id="topo-canvas"></canvas>
+    </div>
+
+    <!-- Floating Top Navigation -->
+    <header class="header-floating">
+        <nav class="navbar" id="main-nav" aria-label="Main Navigation">
+            <a th:href="@{/}" href="/" class="nav-logo" aria-label="Homepage">
+
+                <span class="logo-text">Portfolio</span>
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="nav-item"><a th:href="@{/}" href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a th:href="@{/what-i-do}" href="/what-i-do" class="nav-link">What I Do</a></li>
+                <li class="nav-item active"><a th:href="@{/projects}" href="/projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a th:href="@{/experience}" href="/experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a th:href="@{/about}" href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a th:href="@{/contact}" href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Dark / Light Mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <a th:href="@{/resume}" href="/resume" class="btn-nav-resume" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                    <span>Resume</span>
+                </a>
+
+                <a th:href="@{/contact}" href="/contact" class="btn-nav-contact" aria-label="Contact">
+                    <span>Let's Talk</span>
+                </a>
+
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" style="padding-top: 120px;">
+        <!-- ===================================================================
+             PROJECTS SHOWCASE DEDICATED PAGE
+             =================================================================== -->
+        <section class="projects-showcase-section">
+            <div class="projects-section-header">
+                <span class="section-eyebrow-accent">Selected Engineering Portfolio</span>
+                <h1 class="projects-main-heading"><span class="title-dark">Featured</span> <span class="title-gradient">Projects</span></h1>
+                <p class="projects-lead-txt">Real-world implementations in machine learning, microcontroller telemetry, computer vision algorithms, and Java architecture.</p>
+            </div>
+
+            <!-- 3D Card Carousel / Deck -->
+            <div class="projects-deck-wrapper">
+                <div class="projects-cards-container" id="projects-deck">
+                    
+                    <!-- Card 1: Used Car Price Prediction -->
+                    <div class="project-deck-card active" data-index="0">
+                        <div class="card-glass-header">
+                            <span class="card-tag">CASE 01 • AI & MACHINE LEARNING</span>
+                            <h2 class="card-title">AI-Powered Used Car Price Predictor</h2>
+                        </div>
+                        <!-- Video Showcase -->
+                        <div class="project-video-box">
+                            <video class="project-video-player" autoplay loop muted playsinline controls preload="metadata">
+                                <source th:src="@{/videos/car-price-demo.mp4}" src="../static/videos/car-price-demo.mp4" type="video/mp4">
+                                <source th:src="@{/videos/car-price-demo.webm}" src="../static/videos/car-price-demo.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <p class="card-desc">
+                            End-to-end predictive software solution in Java estimating used vehicle market values using a trained Linear Regression model on extensive Kaggle automotive datasets with SQL data persistence.
+                        </p>
+                        
+                        <div class="card-pipeline-preview">
+                            <div class="pipeline-step"><span class="step-num">1</span> Kaggle Automotive Dataset</div>
+                            <div class="pipeline-step"><span class="step-num">2</span> SQL Cleaning & Schema Normalization</div>
+                            <div class="pipeline-step"><span class="step-num">3</span> Java Linear Regression Engine</div>
+                            <div class="pipeline-step highlight"><span class="step-num">4</span> Instant Valuation Prediction</div>
+                        </div>
+
+                        <div class="card-tech-pills">
+                            <span>Java</span>
+                            <span>Machine Learning</span>
+                            <span>SQL / Relational DB</span>
+                            <span>Linear Regression</span>
+                            <span>EDA</span>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer" class="btn-card-link">
+                                <span>Explore Repository on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Transmission Line Fault Detection -->
+                    <div class="project-deck-card next" data-index="1">
+                        <div class="card-glass-header">
+                            <span class="card-tag">CASE 02 • IOT & HARDWARE TELEMETRY</span>
+                            <h2 class="card-title">Transmission Line Fault Detection Dashboard</h2>
+                        </div>
+
+                        <!-- Interactive Sliding Showcase: Live Video Demo + Hardware Testbed + LT Guard Dashboard UI -->
+                        <div class="project-slider-wrapper" id="lt-project-slider">
+                            <div class="project-slides-track">
+                                <!-- Slide 1: Live Hardware Video Demo -->
+                                <div class="project-slide active">
+                                    <video class="project-slide-video" playsinline controls preload="metadata" muted loop>
+                                        <source th:src="@{/videos/lt-line-demo.mp4}" src="../static/videos/lt-line-demo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <span class="project-thumb-badge">1/3 Live Hardware Demo</span>
+                                </div>
+                                <!-- Slide 2: Hardware Testbed -->
+                                <div class="project-slide">
+                                    <img th:src="@{/images/lt-line-project.jpg}" src="../static/images/lt-line-project.jpg" alt="LT Transmission Line Hardware Prototype" class="project-slide-img">
+                                    <span class="project-thumb-badge">2/3 Hardware Testbed</span>
+                                </div>
+                                <!-- Slide 3: LT Guard Dashboard -->
+                                <div class="project-slide">
+                                    <img th:src="@{/images/lt-guard-dashboard.jpg}" src="../static/images/lt-guard-dashboard.jpg" alt="LT Guard Real-Time Monitoring Dashboard" class="project-slide-img">
+                                    <span class="project-thumb-badge">3/3 LT Guard Dashboard</span>
+                                </div>
+                            </div>
+
+                            <!-- Previous / Next Slide Arrows -->
+                            <button class="slide-nav-btn slide-prev-btn" type="button" aria-label="Previous Slide">‹</button>
+                            <button class="slide-nav-btn slide-next-btn" type="button" aria-label="Next Slide">›</button>
+
+                            <!-- Slide Pagination Indicators -->
+                            <div class="slide-dots-row">
+                                <span class="slide-dot active" data-slide="0"></span>
+                                <span class="slide-dot" data-slide="1"></span>
+                                <span class="slide-dot" data-slide="2"></span>
+                            </div>
+                        </div>
+
+                        <p class="card-desc">
+                            Real-time electrical monitoring web application interfaced with ESP32 sensor nodes. Tracks current spikes, voltage dips, line-to-line faults, and broadcasts instantaneous alerts.
+                        </p>
+                        
+                        <!-- Simulated Live Metric Row -->
+                        <div class="card-metric-preview" id="iot-preview-box">
+                            <div class="metric-item">
+                                <span class="m-lbl">STATUS</span>
+                                <span class="m-val text-coral" id="deck-iot-status">LIVE / OK</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="m-lbl">CURRENT</span>
+                                <span class="m-val" id="deck-iot-current">1.25 A</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="m-lbl">VOLTAGE</span>
+                                <span class="m-val">230.4 V</span>
+                            </div>
+                        </div>
+
+                        <div class="card-tech-pills">
+                            <span>ESP32 Microcontroller</span>
+                            <span>IoT Telemetry</span>
+                            <span>WebSockets / AJAX</span>
+                            <span>JavaScript</span>
+                            <span>Embedded C</span>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer" class="btn-card-link">
+                                <span>Explore Repository on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: AR/VR Try-On -->
+                    <div class="project-deck-card prev" data-index="2">
+                        <div class="card-glass-header">
+                            <span class="card-tag">CASE 03 • COMPUTER VISION &amp; AI</span>
+                            <h2 class="card-title">FitVision — AR Virtual Try-On &amp; Fit Predictor</h2>
+                        </div>
+
+                        <!-- Interactive Sliding Showcase: FitVision Demo + System Architecture -->
+                        <div class="project-slider-wrapper" id="ar-project-slider">
+                            <div class="project-slides-track">
+                                <!-- Slide 1: Live Demo & Fit Analysis -->
+                                <div class="project-slide active">
+                                    <img th:src="@{/images/ar-vr-tryon-demo.jpg}" src="../static/images/ar-vr-tryon-demo.jpg" alt="FitVision AR Virtual Try-On Live Demo" class="project-slide-img">
+                                    <span class="project-thumb-badge">1/2 Live Try-On &amp; Fit Analysis</span>
+                                </div>
+                                <!-- Slide 2: FitVision System Architecture Overview -->
+                                <div class="project-slide">
+                                    <img th:src="@{/images/fitvision-system-overview.png}" src="../static/images/fitvision-system-overview.png" alt="FitVision AI Pipeline &amp; System Overview" class="project-slide-img">
+                                    <span class="project-thumb-badge">2/2 AI System Architecture</span>
+                                </div>
+                            </div>
+
+                            <!-- Previous / Next Slide Arrows -->
+                            <button class="slide-nav-btn slide-prev-btn" type="button" aria-label="Previous Slide">‹</button>
+                            <button class="slide-nav-btn slide-next-btn" type="button" aria-label="Next Slide">›</button>
+
+                            <!-- Slide Pagination Indicators -->
+                            <div class="slide-dots-row">
+                                <span class="slide-dot active" data-slide="0"></span>
+                                <span class="slide-dot" data-slide="1"></span>
+                            </div>
+                        </div>
+
+                        <p class="card-desc">
+                            Real-time camera-based garment try-on visualizer utilizing body pose landmark estimation, automatic clothing scaling, and intelligent size fit analysis in modern web browsers.
+                        </p>
+                        
+                        <div class="card-mesh-preview">
+                            <div class="mesh-stat"><span>Pose Landmark Points:</span> <strong>Full-Body Mesh</strong></div>
+                            <div class="mesh-stat"><span>Fit Recommendation:</span> <strong>Instant Sizing Result</strong></div>
+                            <div class="mesh-stat"><span>Processing Latency:</span> <strong>&lt; 15ms Real-Time</strong></div>
+                        </div>
+
+                        <div class="card-tech-pills">
+                            <span>Computer Vision</span>
+                            <span>Augmented Reality</span>
+                            <span>JavaScript</span>
+                            <span>HTML5 Canvas / WebGL</span>
+                            <span>Facial Geometry</span>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer" class="btn-card-link">
+                                <span>Explore Repository on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Prev / Next Navigation Controls -->
+                <div class="deck-controls-row">
+                    <button class="btn-deck-nav" id="deck-prev-btn" aria-label="Previous project">
+                        <span>Prev</span>
+                    </button>
+                    <button class="btn-deck-nav active" id="deck-next-btn" aria-label="Next project">
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+    
+                    <span class="logo-text">Mohammed Suhail A</span>
+                </div>
+                <p class="footer-meta">Coimbatore / Tiruppur, India</p>
+                <p class="footer-copy">&copy; 2026 Mohammed Suhail A. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span class="f-col-title">Navigation</span>
+                    <a th:href="@{/}" href="/">Home</a>
+                    <a th:href="@{/what-i-do}" href="/what-i-do">What I Do</a>
+                    <a th:href="@{/projects}" href="/projects">Projects</a>
+                    <a th:href="@{/experience}" href="/experience">Experience</a>
+                    <a th:href="@{/about}" href="/about">About</a>
+                    <a th:href="@{/contact}" href="/contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="f-col-title">Social Links</span>
+                    <a href="https://linkedin.com/in/mohammed-suhail-suhii" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:suhiisageni@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Engine -->
+    <script th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+</body>
+</html>

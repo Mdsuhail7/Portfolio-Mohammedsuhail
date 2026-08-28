@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What I Do — Mohammed Suhail A</title>
+    
+    <meta name="description" content="Technical capabilities of Mohammed Suhail A across Software Engineering, Data & ML, Cloud & Azure AI, and IoT Telemetry.">
+    <meta name="keywords" content="Java Developer, Software Capabilities, Machine Learning, Azure AI, IoT Telemetry, Mohammed Suhail">
+    <meta name="author" content="Mohammed Suhail A">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body class="warm-theme">
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Background Minimal Abstract Wave Lines Canvas -->
+    <div class="topographic-bg" aria-hidden="true">
+        <canvas id="topo-canvas"></canvas>
+    </div>
+
+    <!-- Floating Top Navigation -->
+    <header class="header-floating">
+        <nav class="navbar" id="main-nav" aria-label="Main Navigation">
+            <a th:href="@{/}" href="/" class="nav-logo" aria-label="Homepage">
+
+                <span class="logo-text">Portfolio</span>
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="nav-item"><a th:href="@{/}" href="/" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a th:href="@{/what-i-do}" href="/what-i-do" class="nav-link">What I Do</a></li>
+                <li class="nav-item"><a th:href="@{/projects}" href="/projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a th:href="@{/experience}" href="/experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a th:href="@{/about}" href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a th:href="@{/contact}" href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Dark / Light Mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <a th:href="@{/resume}" href="/resume" class="btn-nav-resume" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                    <span>Resume</span>
+                </a>
+
+                <a th:href="@{/contact}" href="/contact" class="btn-nav-contact" aria-label="Contact">
+                    <span>Let's Talk</span>
+                </a>
+
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" style="padding-top: 120px;">
+        <!-- ===================================================================
+             "WHAT I DO" DEDICATED PAGE
+             =================================================================== -->
+        <section class="services-section">
+            <div class="section-top-header" style="text-align: center; max-width: 900px; margin: 0 auto 60px;">
+                <span class="section-eyebrow-accent">Technical Services & Expertise</span>
+                <h1 class="section-main-heading"><span class="title-dark">Engineering</span> <span class="title-gradient">Capabilities</span></h1>
+                <p class="section-lead-txt">Bridging scalable object-oriented backend logic, predictive data modeling, cloud architecture, and real-time hardware telemetry.</p>
+            </div>
+
+            <!-- Detailed Capability Cards -->
+            <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); gap: 36px;">
+                
+                <!-- Capability 1: Software Engineering -->
+                <div class="service-glass-card">
+                    <div class="service-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h2 class="service-title">Software Engineering & Backend</h2>
+                    <p class="service-desc">
+                        Building resilient, maintainable enterprise software applications in Java. Deep grounding in Object-Oriented Programming (OOP) paradigms, SOLID design principles, clean REST API architecture, and rigorous Data Structures & Algorithms.
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <strong style="font-size: 0.95rem; color: var(--text-espresso); display: block; margin-bottom: 8px;">Key Competencies:</strong>
+                        <ul class="service-tags">
+                            <li>Core Java (OOP, Multithreading, Streams)</li>
+                            <li>Spring Boot & MVC</li>
+                            <li>Data Structures & Algorithms</li>
+                            <li>RESTful API Design</li>
+                            <li>Clean Architecture</li>
+                            <li>Maven & Build Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Capability 2: Data & Machine Learning -->
+                <div class="service-glass-card">
+                    <div class="service-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    </div>
+                    <h2 class="service-title">Data Modeling & Machine Learning</h2>
+                    <p class="service-desc">
+                        Designing structured database schemas, automated ETL pipelines, and predictive statistical models. Extracting high-value actionable insights from raw data using SQL queries, Pandas, Scikit-learn, and Power BI dashboards.
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <strong style="font-size: 0.95rem; color: var(--text-espresso); display: block; margin-bottom: 8px;">Key Competencies:</strong>
+                        <ul class="service-tags">
+                            <li>Relational Database Management (MySQL, PostgreSQL)</li>
+                            <li>Data Pipelines & Transformation</li>
+                            <li>Linear Regression & Classification</li>
+                            <li>Exploratory Data Analysis (EDA)</li>
+                            <li>Power BI & Visual Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Capability 3: Cloud & Azure AI -->
+                <div class="service-glass-card">
+                    <div class="service-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                    </div>
+                    <h2 class="service-title">Cloud Infrastructure & Azure AI</h2>
+                    <p class="service-desc">
+                        Certified in Microsoft Azure AI Fundamentals (AI-900). Deploying containerized services using Docker, managing version control on GitHub, and integrating cognitive cloud services into full-stack web architectures.
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <strong style="font-size: 0.95rem; color: var(--text-espresso); display: block; margin-bottom: 8px;">Key Competencies:</strong>
+                        <ul class="service-tags">
+                            <li>Microsoft Azure AI (AI-900 Certified)</li>
+                            <li>Docker Containerization</li>
+                            <li>Git & GitHub CI/CD Workflows</li>
+                            <li>Cloud API Integration</li>
+                            <li>Linux Environments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Capability 4: IoT & Hardware Telemetry -->
+                <div class="service-glass-card">
+                    <div class="service-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h2 class="service-title">IoT & Systems Telemetry</h2>
+                    <p class="service-desc">
+                        Fusing hardware sensor networks with web dashboards. Leveraging ESP32/Arduino microcontrollers, serial telemetry protocols, and circuit analysis to deliver live, low-latency monitoring platforms for real-world physical systems.
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <strong style="font-size: 0.95rem; color: var(--text-espresso); display: block; margin-bottom: 8px;">Key Competencies:</strong>
+                        <ul class="service-tags">
+                            <li>ESP32 & Microcontroller Firmware</li>
+                            <li>Real-Time Telemetry & WebSockets</li>
+                            <li>Sensor Interfacing & Signal Acquisition</li>
+                            <li>PCB Design & Hardware Debugging</li>
+                            <li>Fault Detection Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA Banner -->
+            <div style="margin-top: 70px; text-align: center; background: var(--bg-card); border: 1.5px solid var(--border-coral); border-radius: var(--radius-lg); padding: 56px 40px; box-shadow: var(--shadow-card);">
+                <h3 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--text-espresso);">Have a Project or Role in Mind?</h3>
+                <p style="color: var(--text-muted); font-size: 1.15rem; margin: 12px auto 28px; max-width: 650px;">I'm open for software engineering roles, internships, and technical collaborations.</p>
+                <a th:href="@{/contact}" href="/contact" class="btn-glow-coral">
+                    <span>Let's Discuss Opportunities</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+    
+                    <span class="logo-text">Mohammed Suhail A</span>
+                </div>
+                <p class="footer-meta">Coimbatore / Tiruppur, India</p>
+                <p class="footer-copy">&copy; 2026 Mohammed Suhail A. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span class="f-col-title">Navigation</span>
+                    <a th:href="@{/}" href="/">Home</a>
+                    <a th:href="@{/what-i-do}" href="/what-i-do">What I Do</a>
+                    <a th:href="@{/projects}" href="/projects">Projects</a>
+                    <a th:href="@{/experience}" href="/experience">Experience</a>
+                    <a th:href="@{/about}" href="/about">About</a>
+                    <a th:href="@{/contact}" href="/contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="f-col-title">Social Links</span>
+                    <a href="https://linkedin.com/in/mohammed-suhail-suhii" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:suhiisageni@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Engine -->
+    <script th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+</body>
+</html>

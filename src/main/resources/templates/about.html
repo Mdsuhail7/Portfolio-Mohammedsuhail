@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Mohammed Suhail A</title>
+    
+    <meta name="description" content="About Mohammed Suhail A: Electrical & Electronics Engineering student at SNS College of Technology with an 8.39 CGPA transitioning to Software Engineering.">
+    <meta name="keywords" content="About Mohammed Suhail, SNS College of Technology, EEE to Software Engineer, 8.39 CGPA, AI-900, Coimbatore">
+    <meta name="author" content="Mohammed Suhail A">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body class="warm-theme">
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Background Minimal Abstract Wave Lines Canvas -->
+    <div class="topographic-bg" aria-hidden="true">
+        <canvas id="topo-canvas"></canvas>
+    </div>
+
+    <!-- Floating Top Navigation -->
+    <header class="header-floating">
+        <nav class="navbar" id="main-nav" aria-label="Main Navigation">
+            <a th:href="@{/}" href="/" class="nav-logo" aria-label="Homepage">
+
+                <span class="logo-text">Portfolio</span>
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="nav-item"><a th:href="@{/}" href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a th:href="@{/what-i-do}" href="/what-i-do" class="nav-link">What I Do</a></li>
+                <li class="nav-item"><a th:href="@{/projects}" href="/projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a th:href="@{/experience}" href="/experience" class="nav-link">Experience</a></li>
+                <li class="nav-item active"><a th:href="@{/about}" href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a th:href="@{/contact}" href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Dark / Light Mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <a th:href="@{/resume}" href="/resume" class="btn-nav-resume" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                    <span>Resume</span>
+                </a>
+
+                <a th:href="@{/contact}" href="/contact" class="btn-nav-contact" aria-label="Contact">
+                    <span>Let's Talk</span>
+                </a>
+
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" style="padding-top: 120px;">
+        <!-- ===================================================================
+             ABOUT DEDICATED PAGE
+             =================================================================== -->
+        <section class="about-section">
+            <div class="about-grid-layout">
+                
+                <!-- Narrative Column -->
+                <div class="about-narrative-col">
+                    <span class="section-eyebrow-accent">Background & Philosophy</span>
+                    <h1 class="about-title"><span class="title-dark">Built From Engineering.</span><br><span class="title-gradient">Driven By Software.</span></h1>
+                    
+                    <p class="about-p">
+                        I am an Electrical and Electronics Engineering undergraduate at SNS College of Technology (2023 – 2027), strategically directing my technical trajectory toward Software Engineering.
+                    </p>
+                    <p class="about-p">
+                        My study of electrical systems, microcontrollers, and signal physics trained me to analyze complex real-world architectures from first principles. Translating this first-principles rigor to code allows me to build performant Java applications, optimized database models, and resilient software pipelines.
+                    </p>
+                    <p class="about-p">
+                        Outside of core coursework, I serve as a Joint Secretary of the VIMZER Association, organizing hackathons, technical paper presentations, and hands-on workshops.
+                    </p>
+
+                    <!-- Academic Stats Card with CGPA 8.33 -->
+                    <div class="academic-stat-card">
+                        <div class="cgpa-circle-display">
+                            <div class="cgpa-num" id="cgpa-display">8.33</div>
+                            <div class="cgpa-lbl">CGPA / 10.0</div>
+                        </div>
+                        <div class="academic-details">
+                            <h4>B.E. Electrical & Electronics Engineering</h4>
+                            <p>SNS College of Technology, Coimbatore</p>
+                            <span class="academic-tag">Expected Graduation: 2027</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honors & Awards Column -->
+                <div class="awards-testimonials-col">
+                    <div class="awards-header">
+                        <span class="section-eyebrow-accent">Honors & Recognition</span>
+                        <h3><span class="title-dark">National &amp;</span> <span class="title-gradient">State Awards</span></h3>
+                    </div>
+
+                    <div class="award-testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <h4 class="award-name">First Runner-Up — Technocognition 2025</h4>
+                        <p class="award-org">Dayananda Sagar University, Bengaluru</p>
+                        <div class="testi-author-row">
+                            <div class="author-avatar">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                            </div>
+                            <div class="author-meta">
+                                <strong>Technical Project Presentation</strong>
+                                <span>National Level Competition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="award-testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <h4 class="award-name">Winner — Project Competition & Ideathon</h4>
+                        <p class="award-org">Sri Krishna College of Tech & Sri Ramakrishna Eng College</p>
+                        <div class="testi-author-row">
+                            <div class="author-avatar">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                            </div>
+                            <div class="author-meta">
+                                <strong>Innovation & Hackathon Awards</strong>
+                                <span>Winner in multiple regional hackathons</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Card 1: Microsoft Azure -->
+                    <div class="award-testi-card" style="border-color: var(--border-coral);">
+                        <h4 class="award-name">Microsoft Certified: Azure AI Fundamentals (AI-900)</h4>
+                        <p class="award-org">Microsoft Certified Professional</p>
+                        <div class="testi-author-row">
+                            <div class="author-avatar">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                            </div>
+                            <div class="author-meta">
+                                <strong>Cloud & AI Competency</strong>
+                                <span>Issued by Microsoft</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Card 2: Deloitte Data Analytics -->
+                    <div class="award-testi-card" style="border-color: var(--border-warm);">
+                        <h4 class="award-name">Deloitte Data Analytics &amp; Forensic Tech Simulation</h4>
+                        <p class="award-org">Deloitte (Issued via Forage) • August 2026</p>
+                        <div class="testi-author-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="author-avatar">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                </div>
+                                <div class="author-meta">
+                                    <strong>Data Analysis &amp; Forensic Technology</strong>
+                                    <span>Code: 6a727cd6125ca4556efe145e</span>
+                                </div>
+                            </div>
+                            <a th:href="@{/certificates/Deloitte-Data-Analytics-Certificate.pdf}" href="../static/certificates/Deloitte-Data-Analytics-Certificate.pdf" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: var(--accent-coral); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                                <span>PDF ↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             DEDICATED ACHIEVEMENTS & LIVE COMPETITION VIDEO SHOWCASE SECTION
+             =================================================================== -->
+        <section class="achievements-showcase-section" id="achievements-showcase">
+            <div class="achievements-section-header">
+                <span class="section-eyebrow-accent">Live Competition & Demonstration</span>
+                <h2 class="section-main-heading">Achievement Video Showcase</h2>
+                <p class="section-lead-txt">Live jury defense, hardware demonstration, and technical presentation footage from national engineering symposia and state-level hackathons.</p>
+            </div>
+
+            <div class="achievement-cinema-list">
+                
+                <!-- Video Showcase 1: Technocognition 2025 -->
+                <div class="achievement-cinema-card">
+                    <!-- Interactive Sliding Media Showcase: Video + Photo -->
+                    <div class="project-slider-wrapper achievement-cinema-video-wrap" id="achievement-slider-1">
+                        <div class="project-slides-track">
+                            <!-- Slide 1: Live Hardware Video Demo -->
+                            <div class="project-slide active">
+                                <video class="project-slide-video" playsinline controls preload="metadata" muted loop>
+                                    <source th:src="@{/videos/achievement-demo.mp4}" src="../static/videos/achievement-demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <span class="project-thumb-badge">1/2 Live Presentation Video</span>
+                            </div>
+                            <!-- Slide 2: Award & Hardware Photo -->
+                            <div class="project-slide">
+                                <img th:src="@{/images/technocognition-award-ceremony.jpg}" src="../static/images/technocognition-award-ceremony.jpg" alt="Technocognition 2025 First Runner-Up Award Ceremony" class="project-slide-img">
+                                <span class="project-thumb-badge">2/2 Award Ceremony &amp; Prize Cheque</span>
+                            </div>
+                        </div>
+
+                        <!-- Previous / Next Slide Arrows -->
+                        <button class="slide-nav-btn slide-prev-btn" type="button" aria-label="Previous Slide">‹</button>
+                        <button class="slide-nav-btn slide-next-btn" type="button" aria-label="Next Slide">›</button>
+
+                        <!-- Slide Pagination Indicators -->
+                        <div class="slide-dots-row">
+                            <span class="slide-dot active" data-slide="0"></span>
+                            <span class="slide-dot" data-slide="1"></span>
+                        </div>
+
+                        <div class="cinema-floating-badge">
+                            <span class="badge-dot coral"></span>
+                            <span>Technocognition 2025 • First Runner-Up</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Meta & Achievements Details Grid -->
+                    <div class="achievement-cinema-info">
+                        <div class="cinema-info-header">
+                            <span class="card-tag">NATIONAL PROJECT DEFENSE • HARDWARE TELEMETRY</span>
+                            <h3 class="cinema-title">Real-Time Transmission Line Fault Detection Defense</h3>
+                            <p class="cinema-desc">
+                                Live demonstration and technical presentation delivered before expert jury panels at Dayananda Sagar University, Bengaluru. Details microcontroller telemetry, sensor calibration, and web dashboard alerting.
+                            </p>
+                        </div>
+
+                        <!-- Highlight Metrics & Accolades -->
+                        <div class="cinema-accolades-grid">
+                            <div class="accolade-box">
+                                <span class="accolade-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                                </span>
+                                <div class="accolade-text">
+                                    <strong>First Runner-Up (₹30,000)</strong>
+                                    <p>Technocognition 2025 — National Level</p>
+                                </div>
+                            </div>
+                            <div class="accolade-box">
+                                <span class="accolade-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                                </span>
+                                <div class="accolade-text">
+                                    <strong>Live Hardware Rig</strong>
+                                    <p>ESP32 Sensor Matrix & Microsecond Trip Logic</p>
+                                </div>
+                            </div>
+                            <div class="accolade-box">
+                                <span class="accolade-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                                </span>
+                                <div class="accolade-text">
+                                    <strong>Jury Evaluation</strong>
+                                    <p>Defended before Electrical & Software Faculty</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cinema-tags-row">
+                            <span>Dayananda Sagar University</span>
+                            <span>National Finalist</span>
+                            <span>Hardware & Software Defense</span>
+                            <span>Live IoT Demo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Showcase 2: Project Competition & Hackathon Demonstration -->
+                <div class="achievement-cinema-card">
+                    <!-- Interactive Sliding Media Showcase: Video + Photo Gallery -->
+                    <div class="project-slider-wrapper achievement-cinema-video-wrap" id="achievement-slider-2">
+                        <div class="project-slides-track">
+                            <!-- Slide 1: Live Demo Video -->
+                            <div class="project-slide active">
+                                <video class="project-slide-video" playsinline controls preload="metadata" muted loop>
+                                    <source th:src="@{/videos/achievement-demo-2.mp4}" src="../static/videos/achievement-demo-2.mp4" type="video/mp4">
+                                    <source th:src="@{/videos/WhatsApp Video 2026-08-28 at 11.50.44 AM.mp4}" src="../static/videos/WhatsApp Video 2026-08-28 at 11.50.44 AM.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <span class="project-thumb-badge">1/3 Live Demonstration Video</span>
+                            </div>
+                            <!-- Slide 2: Sri Krishna College of Technology (SKCET) Award Photo -->
+                            <div class="project-slide">
+                                <img th:src="@{/images/skcet-award-ceremony.jpg}" src="../static/images/skcet-award-ceremony.jpg" alt="Sri Krishna College of Technology (SKCET) Project Award Presentation" class="project-slide-img">
+                                <span class="project-thumb-badge">2/3 SKCET Project Competition Winner</span>
+                            </div>
+                            <!-- Slide 3: Dr N.G.P Arts & Science InnovateX Kanam'26 Award Photo -->
+                            <div class="project-slide">
+                                <img th:src="@{/images/innovatex-award-ceremony.jpg}" src="../static/images/innovatex-award-ceremony.jpg" alt="Dr N.G.P Arts and Science InnovateX Kanam'26 Award Ceremony" class="project-slide-img">
+                                <span class="project-thumb-badge">3/3 InnovateX Kanam'26 Award Stage</span>
+                            </div>
+                        </div>
+
+                        <!-- Previous / Next Slide Arrows -->
+                        <button class="slide-nav-btn slide-prev-btn" type="button" aria-label="Previous Slide">‹</button>
+                        <button class="slide-nav-btn slide-next-btn" type="button" aria-label="Next Slide">›</button>
+
+                        <!-- Slide Pagination Indicators -->
+                        <div class="slide-dots-row">
+                            <span class="slide-dot active" data-slide="0"></span>
+                            <span class="slide-dot" data-slide="1"></span>
+                            <span class="slide-dot" data-slide="2"></span>
+                        </div>
+
+                        <div class="cinema-floating-badge">
+                            <span class="badge-dot yellow"></span>
+                            <span>Ideathon & Project Competition • Winner</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Meta & Achievements Details Grid -->
+                    <div class="achievement-cinema-info">
+                        <div class="cinema-info-header">
+                            <span class="card-tag">PROJECT COMPETITION • INNOVATION & IDEATHON</span>
+                            <h3 class="cinema-title">Interactive Project Demonstration & Award Highlights</h3>
+                            <p class="cinema-desc">
+                                Live innovation demonstration, software pipeline walkthrough, and award ceremony highlights from Dr N.G.P Arts and Science (InnovateX Kanam'26), Sri Krishna College of Technology (SKCET), and Sri Ramakrishna Engineering College (SREC).
+                            </p>
+                        </div>
+
+                        <!-- Highlight Metrics & Accolades -->
+                        <div class="cinema-accolades-grid">
+                            <div class="accolade-box">
+                                <span class="accolade-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                                </span>
+                                <div class="accolade-text">
+                                    <strong>Hackathon Winner</strong>
+                                    <p>Project Presentation & Ideathon Award</p>
+                                </div>
+                            </div>
+                            <div class="accolade-box">
+                                <span class="accolade-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                </span>
+                                <div class="accolade-text">
+                                    <strong>Software Pipeline</strong>
+                                    <p>Algorithm Implementation & Live Demo</p>
+                                </div>
+                            </div>
+                            <div class="accolade-box">
+                                <span class="accolade-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5A36" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                                </span>
+                                <div class="accolade-text">
+                                    <strong>Innovation Award</strong>
+                                    <p>InnovateX Kanam'26 & State Level</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cinema-tags-row">
+                            <span>Dr N.G.P Arts & Science (InnovateX Kanam'26)</span>
+                            <span>SKCET & SREC</span>
+                            <span>Ideathon Winner</span>
+                            <span>Technical Presentation</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+    
+                    <span class="logo-text">Mohammed Suhail A</span>
+                </div>
+                <p class="footer-meta">Coimbatore / Tiruppur, India</p>
+                <p class="footer-copy">&copy; 2026 Mohammed Suhail A. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span class="f-col-title">Navigation</span>
+                    <a th:href="@{/}" href="/">Home</a>
+                    <a th:href="@{/what-i-do}" href="/what-i-do">What I Do</a>
+                    <a th:href="@{/projects}" href="/projects">Projects</a>
+                    <a th:href="@{/experience}" href="/experience">Experience</a>
+                    <a th:href="@{/about}" href="/about">About</a>
+                    <a th:href="@{/contact}" href="/contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="f-col-title">Social Links</span>
+                    <a href="https://linkedin.com/in/mohammed-suhail-suhii" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:suhiisageni@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Engine -->
+    <script th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+</body>
+</html>

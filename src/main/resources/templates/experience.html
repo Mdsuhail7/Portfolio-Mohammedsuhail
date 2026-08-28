@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Mohammed Suhail A</title>
+    
+    <meta name="description" content="Career timeline and internship experience of Mohammed Suhail A at LinkX Labs, S&T Machinery, and Atchayam Electronics.">
+    <meta name="keywords" content="Experience, LinkX Labs, S&T Machinery, Atchayam Electronics, Mohammed Suhail, Software Engineer">
+    <meta name="author" content="Mohammed Suhail A">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body class="warm-theme">
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Background Minimal Abstract Wave Lines Canvas -->
+    <div class="topographic-bg" aria-hidden="true">
+        <canvas id="topo-canvas"></canvas>
+    </div>
+
+    <!-- Floating Top Navigation -->
+    <header class="header-floating">
+        <nav class="navbar" id="main-nav" aria-label="Main Navigation">
+            <a th:href="@{/}" href="/" class="nav-logo" aria-label="Homepage">
+
+                <span class="logo-text">Portfolio</span>
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="nav-item"><a th:href="@{/}" href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a th:href="@{/what-i-do}" href="/what-i-do" class="nav-link">What I Do</a></li>
+                <li class="nav-item"><a th:href="@{/projects}" href="/projects" class="nav-link">Projects</a></li>
+                <li class="nav-item active"><a th:href="@{/experience}" href="/experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a th:href="@{/about}" href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a th:href="@{/contact}" href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Dark / Light Mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <a th:href="@{/resume}" href="/resume" class="btn-nav-resume" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                    <span>Resume</span>
+                </a>
+
+                <a th:href="@{/contact}" href="/contact" class="btn-nav-contact" aria-label="Contact">
+                    <span>Let's Talk</span>
+                </a>
+
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" style="padding-top: 120px;">
+        <!-- ===================================================================
+             EXPERIENCE DEDICATED PAGE
+             =================================================================== -->
+        <section class="experience-section">
+            <div class="section-top-header" style="text-align: center; max-width: 750px; margin: 0 auto 60px;">
+                <span class="section-eyebrow-accent">Professional Journey</span>
+                <h1 class="section-main-heading"><span class="title-dark">Industry</span> <span class="title-gradient">Experience</span></h1>
+                <p class="section-lead-txt">Hands-on internships across embedded systems, industrial automation, and PCB hardware validation.</p>
+            </div>
+
+            <div class="timeline-cards-grid">
+                
+                <!-- Role 1: Deloitte -->
+                <div class="exp-dark-card featured">
+                    <div class="exp-badge-top">
+                        <span class="exp-chip">August 2026</span>
+                        <span class="exp-status-live">Certified Simulation</span>
+                    </div>
+                    <h2 class="exp-role-title">Data Analytics &amp; Technology Consulting</h2>
+                    <h3 class="exp-comp-title" style="color: var(--accent-coral);">Deloitte <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">(via Forage)</span></h3>
+                    
+                    <p class="service-desc" style="margin-top: 8px;">
+                        Completed practical simulation in enterprise data analysis, forensic technology, pattern recognition, and technology consulting advisory.
+                    </p>
+
+                    <ul class="exp-points-list">
+                        <li><strong>Data Analysis:</strong> Ingested, cleaned, and evaluated complex client datasets to uncover strategic operational trends and performance drivers.</li>
+                        <li><strong>Forensic Technology:</strong> Performed forensic data investigations, anomaly detection, and data pattern analysis to ensure digital system integrity.</li>
+                        <li><strong>Consulting Deliverables:</strong> Synthesized analytical findings into structured executive briefs and actionable visualization dashboards.</li>
+                    </ul>
+
+                    <div class="exp-card-footer" style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border-warm); padding-top: 14px;">
+                        <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">Verification: 6a727cd6125ca4556efe145e</span>
+                        <a th:href="@{/certificates/Deloitte-Data-Analytics-Certificate.pdf}" href="../static/certificates/Deloitte-Data-Analytics-Certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-card-link" style="padding: 8px 16px; font-size: 0.85rem; margin-top: 0;">
+                            <span>View Certificate (PDF)</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Role 2: LinkX Lab -->
+                <div class="exp-dark-card">
+                    <div class="exp-badge-top">
+                        <span class="exp-chip">26 May 2026 – 24 Jun 2026</span>
+                        <span class="exp-status-live" style="background: rgba(255, 200, 87, 0.15); color: #B38600; border-color: rgba(255, 200, 87, 0.4);">30-Day Intensive</span>
+                    </div>
+                    <h2 class="exp-role-title">Embedded Systems &amp; IoT Intern</h2>
+                    <h3 class="exp-comp-title">LinkX Lab Pvt. Ltd. <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">(Bhavani, Erode)</span></h3>
+                    
+                    <p class="service-desc" style="margin-top: 8px;">
+                        Hands-on embedded firmware development, AIoT telemetry, sensor calibration, and PCB prototype testing on industry-standard microcontrollers.
+                    </p>
+
+                    <ul class="exp-points-list">
+                        <li><strong>Firmware &amp; Microcontrollers:</strong> Programmed ESP32 and Arduino Uno boards in Embedded C / Arduino IDE with real-time serial monitor debugging and sensor matrix integration.</li>
+                        <li><strong>LT Guard Fault Dashboard:</strong> Designed and implemented the complete <em>LT Transmission Line Fault Detection Dashboard</em> for real-time electrical trip monitoring and alerts.</li>
+                        <li><strong>Hardware Prototyping:</strong> Performed breadboard circuit wiring, soldering, and PCB hardware validation under the mentorship of Giri Prasath (CTO).</li>
+                    </ul>
+
+                    <div class="exp-card-footer" style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border-warm); padding-top: 14px;">
+                        <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">Course: 23EEP305 Summer Internship III</span>
+                        <a th:href="@{/certificates/LinkX-Lab-Internship-Report.pdf}" href="../static/certificates/LinkX-Lab-Internship-Report.pdf" target="_blank" rel="noopener noreferrer" class="btn-card-link" style="padding: 8px 16px; font-size: 0.85rem; margin-top: 0;">
+                            <span>View Certificate (PDF)</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Role 3: S&T Machinery -->
+                <div class="exp-dark-card">
+                    <div class="exp-badge-top">
+                        <span class="exp-chip">01 Jun 2025 – 27 Jun 2025</span>
+                        <span class="exp-status-live" style="background: rgba(125, 226, 184, 0.15); color: #0D7A53; border-color: rgba(125, 226, 184, 0.4);">Industrial Automation</span>
+                    </div>
+                    <h2 class="exp-role-title">CNC Automation &amp; Control Panel Engineering Intern</h2>
+                    <h3 class="exp-comp-title">S&amp;T Machinery (P) Ltd. <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">(Manufacturing Unit of S&amp;T Group, Coimbatore)</span></h3>
+                    
+                    <p class="service-desc" style="margin-top: 8px;">
+                        Practical training in industrial automation, CNC control cabinet assembly, power tool operations, and electrical wiring for Mitsubishi M80 and FANUC CNC controllers.
+                    </p>
+
+                    <ul class="exp-points-list">
+                        <li><strong>CNC Control Systems (Mitsubishi M80 &amp; FANUC):</strong> Analyzed controller architectures, configured I/O modules, power supply units, and executed signal wiring between CNC controllers, relays, SMPS, and industrial sensors.</li>
+                        <li><strong>Panel Fabrication &amp; Power Tools:</strong> Assembled electrical control panels on heavy-gauge MS sheet enclosures—mounting DIN rails, MCBs, MPCBs, contactors, line reactors, and terminal blocks using industrial power tools and safety gear.</li>
+                        <li><strong>Routing, Crimping &amp; Ferrule Printing:</strong> Executed wire management through PVC cable ducts, ferrule crimping across 3.2/4.2/5.2 sizes, and printed alphanumeric wire ferrule tags matching detailed electrical schematics.</li>
+                        <li><strong>Machine Mounting &amp; Integration:</strong> Participated in heavy-duty control box mounting onto machine chassis, vibration damping, safety grounding, and operational validation.</li>
+                    </ul>
+
+                    <!-- Internship Media Showcase -->
+                    <div class="exp-media-grid">
+                        <div class="exp-media-item">
+                            <img th:src="@{/images/st-machinery-panel-assembly.jpg}" src="../static/images/st-machinery-panel-assembly.jpg" alt="Mohammed Suhail assembling electrical panel with power drill at S&T Machinery" class="exp-media-img">
+                            <div class="exp-media-caption">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                                <span>Hands-on Panel Assembly &amp; Wiring</span>
+                            </div>
+                        </div>
+                        <div class="exp-media-item">
+                            <img th:src="@{/images/st-machinery-facility.jpg}" src="../static/images/st-machinery-facility.jpg" alt="S&T Machinery (P) Ltd Plant in Coimbatore" class="exp-media-img">
+                            <div class="exp-media-caption">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                                <span>S&amp;T Machinery Plant (Coimbatore)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-card-footer" style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border-warm); padding-top: 14px;">
+                        <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">Auth: Shanmugapriya KM (Sr. Mgr - HR) | Ref: 713523EE030</span>
+                        <a th:href="@{/certificates/ST-Machinery-Internship-Certificate.pdf}" href="../static/certificates/ST-Machinery-Internship-Certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-card-link" style="padding: 8px 16px; font-size: 0.85rem; margin-top: 0;">
+                            <span>View Certificate (PDF)</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Role 4: Atchayam Electronics -->
+                <div class="exp-dark-card">
+                    <div class="exp-badge-top">
+                        <span class="exp-chip">03 Aug 2024 – 17 Aug 2024</span>
+                        <span class="exp-status-live" style="background: rgba(255, 90, 54, 0.12); color: var(--accent-coral); border-color: rgba(255, 90, 54, 0.35);">Level I Certified</span>
+                    </div>
+                    <h2 class="exp-role-title">PCB Assembly &amp; Electronics Intern</h2>
+                    <h3 class="exp-comp-title">Atchayam Electronics <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">(Sivanandhapuram, Coimbatore)</span></h3>
+                    
+                    <p class="service-desc" style="margin-top: 8px;">
+                        Completed Level I industrial internship training program focusing on organizational workflows, PCB component assembly, manual soldering, and electronic circuit validation.
+                    </p>
+
+                    <ul class="exp-points-list">
+                        <li><strong>PCB Assembly &amp; Level I Training:</strong> Successfully completed certified Level I training program in printed circuit board (PCB) component population, through-hole/SMD placement, and precision soldering.</li>
+                        <li><strong>Hardware Testing &amp; Quality Inspection:</strong> Performed electrical continuity checks, power supply rail measurements, component verification, and hardware debugging.</li>
+                        <li><strong>Industrial Operations:</strong> Gained foundational insight into electronics manufacturing workflows, schematic diagram interpretation, and assembly-line quality control.</li>
+                    </ul>
+
+                    <div class="exp-card-footer" style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border-warm); padding-top: 14px;">
+                        <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">Auth: V. Mahesh (Proprietor) | Ref: 713523EE030</span>
+                        <a th:href="@{/certificates/Atchayam-Electronics-Internship-Certificate.pdf}" href="../static/certificates/Atchayam-Electronics-Internship-Certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-card-link" style="padding: 8px 16px; font-size: 0.85rem; margin-top: 0;">
+                            <span>View Certificate (PDF)</span>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+    
+                    <span class="logo-text">Mohammed Suhail A</span>
+                </div>
+                <p class="footer-meta">Coimbatore / Tiruppur, India</p>
+                <p class="footer-copy">&copy; 2026 Mohammed Suhail A. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span class="f-col-title">Navigation</span>
+                    <a th:href="@{/}" href="/">Home</a>
+                    <a th:href="@{/what-i-do}" href="/what-i-do">What I Do</a>
+                    <a th:href="@{/projects}" href="/projects">Projects</a>
+                    <a th:href="@{/experience}" href="/experience">Experience</a>
+                    <a th:href="@{/about}" href="/about">About</a>
+                    <a th:href="@{/contact}" href="/contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="f-col-title">Social Links</span>
+                    <a href="https://linkedin.com/in/mohammed-suhail-suhii" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Mdsuhail7" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:suhiisageni@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Engine -->
+    <script th:src="@{/js/main.js}" src="../static/js/main.js"></script>
+</body>
+</html>
